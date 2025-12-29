@@ -1,17 +1,33 @@
-# Agent Skills
+# Agent Skills Documentation
 
-[Agent Skills](https://agentskills.io) are a simple, open format for giving agents new capabilities and expertise.
+This directory contains the source code for the Agent Skills documentation site, which is built using [Mintlify](https://mintlify.com).
 
-Skills are folders of instructions, scripts, and resources that agents can discover and use to perform better at specific tasks. Write once, use everywhere.
+## Development
 
-## Getting Started
+Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
 
-- [Documentation](https://agentskills.io) - Guides and tutorials
-- [Specification](https://agentskills.io/specification) - Format details
-- [Example Skills](https://github.com/anthropics/skills) - See what's possible
+```
+npm i -g mint
+```
 
-This repo contains the specification, documentation, and reference SDK. Also see a list of example skills [here](https://github.com/anthropics/skills).
+Run the following command at the root of your documentation, where your `docs.json` is located:
 
-## About
+```
+mint dev
+```
 
-Agent Skills is an open format maintained by [Anthropic](https://anthropic.com) and open to contributions from the community.
+View your local preview at `http://localhost:3000`.
+
+## Publishing changes
+
+Changes are deployed to production automatically after pushing to the default branch.
+
+## Need help?
+
+### Troubleshooting
+
+- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
+- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+
+### Resources
+- [Mintlify documentation](https://mintlify.com/docs)
